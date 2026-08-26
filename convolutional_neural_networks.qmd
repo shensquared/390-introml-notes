@@ -357,7 +357,7 @@ Both slices of the tensor filter are identical here, so the output is simply the
 
 The animation below steps through the same computation, with the $f_2$ path drawn in orange and the $f_1$ path in blue. First, each $3 \times 3$ window of the (zero-padded) input produces one cell in each of the two channels; then the tensor filter slides over both channels together, producing each cell of the final output.
 
-{{< include figures/_cnn_2d_conv_anim.qmd >}}
+{{< include figures/cnn_2d_conv_anim.html >}}
 
 We are going to design neural networks that have this structure. Each "bank" of the filter bank will correspond to a neural-network layer. The numbers in the individual filters will be the "weights" (plus a single additive bias or offset value for each filter) of the network, that we will train using gradient descent. What makes this interesting and powerful (and somewhat confusing at first) is that the same weights are used many many times in the computation of each layer. This *weight sharing* means that we can express a transformation on a large image with relatively few parameters; it also means we'll have to take care in figuring out exactly how to train it!
 
