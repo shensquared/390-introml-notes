@@ -355,7 +355,7 @@ Both slices of the tensor filter are identical here, so the output is simply the
 \end{tikzpicture}
 :::
 
-The animation below steps through the same computation, with the $f_2$ path drawn in orange and the $f_1$ path in blue. First, each $3 \times 3$ window of the (zero-padded) input produces one cell in each of the two channels; then the tensor filter slides over both channels together, producing each cell of the final output.
+The animation below steps through the same computation:
 
 {{< include figures/cnn_2d_conv_anim.html >}}
 
